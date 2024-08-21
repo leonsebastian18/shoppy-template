@@ -1,8 +1,54 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-   "slider-banner": {
-    "type":"custom-slider"
-   }
+    "slider-banner": {
+      "type": "custom-slider",
+      "blocks": {
+        "slide_zLxJbx": {
+          "type": "slide",
+          "settings": {
+            "slide_Text": "",
+            "slide_image": "shopify:\/\/shop_images\/biscotti-lays-in-a-monstera-leaf.jpg",
+            "link_text": "ver mas",
+            "link_url": ""
+          }
+        },
+        "slide_xTn3Vq": {
+          "type": "slide",
+          "settings": {
+            "slide_Text": "",
+            "slide_image": "shopify:\/\/shop_images\/hands-slice-red-pepper-on-wooden-cutting-board.jpg",
+            "link_text": "ver mas",
+            "link_url": ""
+          }
+        },
+        "slide_LWE3E7": {
+          "type": "slide",
+          "settings": {
+            "slide_Text": "",
+            "slide_image": "shopify:\/\/shop_images\/sample-normal-wax.png",
+            "link_text": "ver mas",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_zLxJbx",
+        "slide_xTn3Vq",
+        "slide_LWE3E7"
+      ],
+      "settings": {
+        "text": "Esto es un texto por defecto"
+      }
+    }
   },
   "order": [
     "slider-banner"
