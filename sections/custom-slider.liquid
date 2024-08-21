@@ -1,0 +1,87 @@
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {% for block in section.blocks %}
+      <div class="swiper-slide"></div>
+      <article>
+        <h2>{{ block.settings.slide_Text }}</h2>
+        <a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a>
+      </article>
+      <img src="{{ block.settings.slide_image | image_url }}" alt="slide-image">
+    {% endfor %}
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom slider - Banner",
+  "class": "",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Esto es un label",
+      "default": "Esto es un texto por defecto",
+      "info": "Info sobre el setting",
+      "placeholder": "Esto es un placeholder"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "text", "id": "slide_Text", "label": "Titulo para el slide" },
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Selecciona tu image"
+        },
+        {
+          "type": "textarea",
+          "id": "link_text",
+          "label": "Link text",
+          "default": "ver mas"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Url"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
