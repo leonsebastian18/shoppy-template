@@ -1,3 +1,5 @@
+{{ 'section.custom-slide.css' | asset_url | stylesheet_tag }}
+
 <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
@@ -47,7 +49,6 @@
 {% schema %}
 {
   "name": "Custom slider - Banner",
-  "class": "",
   "settings": [
     {
       "type": "text",
